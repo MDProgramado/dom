@@ -13,7 +13,16 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+    
+        const div = document.querySelector('div');
+        div.innerHTML = 'Texto alterado via innerHTML';
+        // div.outerHTML = '<section><h2>Novo Conteúdo</h2><p>Parágrafo dentro da seção</p></section>';
+        div.insertAdjacentElement('beforebegin', 'hr');
+        div.insertAdjacentHTML('afterend', '<footer>Rodapé adicionado</footer>');
+        div.insertAdjacentElement('beforeend', '<p> depois do fim</p>');
+        // Somente texto (sem tags)
+        console.log(div.innerText)
+
     </script>
 </body>
 
